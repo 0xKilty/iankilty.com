@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 	<title>Ian Kilty&#39;s Webpage</title>
-	<link>http://localhost/tags/hackathon/</link>
-	<description>Recent content in Hackathon on Ian Kilty&#39;s Webpage</description>
+	<link>http://localhost/tags/solidity/</link>
+	<description>Recent content in Solidity on Ian Kilty&#39;s Webpage</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Sat, 15 Apr 2023 19:54:22 -0600</lastBuildDate>
+	<lastBuildDate>Sun, 04 Dec 2022 19:55:42 -0600</lastBuildDate>
     
-        <atom:link href="http://localhost/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>

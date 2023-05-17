@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Patricoin</title>
+    <link rel='stylesheet' type='text/css' href='/style.css'>
+    <link rel='alternate' type='application/rss+xml' title="Ian Kilty&#39;s Webpage RSS" href='/index.xml'>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/img/android-chrome-192x192">
+    <link rel="shortcut icon" sizes="192x192" href="/img/android-chrome-192x192">
+    <link rel="apple-touch-icon" href="/img/android-chrome-192x192">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+    
+        <header>
+    <h2 class="heavy" style="text-transform: capitalize;">
+        
+            projects
+        
+    </h2>
+</header>
+
+        
+
+  
+  
+  
+  
+  
+  <a href="/" id="" class="navhead heavy">Home</a>
+
+  
+  
+  
+  
+  
+  <a href="/blog" id="" class="navhead heavy">Blog</a>
+
+  
+  
+  
+  
+  
+  <a href="/projects" id="active" class="navhead heavy">Projects</a>
+
+  
+  
+  
+  
+  
+  <a href="https://github.com/0xKilty/Notes" id="" class="navhead heavy">Notes</a>
+
+  
+  
+  
+  
+  
+  <a href="https://github.com/0xKilty" id="" class="navhead heavy">Github</a>
+
+  
+  
+  
+  
+  
+  <a href="https://www.linkedin.com/in/ian-kilty/" id="" class="navhead heavy">Linkedin</a>
+
+  
+  
+  
+  
+  
+  <a href="/resume.pdf" id="" class="navhead heavy">Resume</a>
+
+  
+  
+  
+  
+  
+  <a href="/blog/index.xml" id="" class="navhead heavy">RSS</a>
+
+
+        
+
+<h2 class="arttitle heavy">Patricoin</h2>
+<span>
+    December 4, 2022 -
+    Tags:
+    
+        <a href="/tags/web-dev/" class="heavy" style="color: #fff; text-decoration: none;">
+            Web Dev
+        </a>
+    
+        <a href="/tags/solidity/" class="heavy" style="color: #fff; text-decoration: none;">
+            Solidity
+        </a>
+    
+</span>
+<aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#modivation">Modivation</a></li>
+    <li><a href="#creation">Creation</a>
+      <ul>
+        <li><a href="#erc-777-standard">ERC-777 Standard</a></li>
+        <li><a href="#tools">Tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#deployment">Deployment</a>
+      <ul>
+        <li><a href="#goelri-testnet">Goelri Testnet</a></li>
+        <li><a href="#uniswap-pool">Uniswap Pool</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-the-website">Creating the website</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></aside>
+<div class="page">
+    <h2 id="modivation">Modivation</h2>
+<p>Patricoin is an <a href="https://eips.ethereum.org/EIPS/eip-777">ERC-777 token</a> that I made to further understand crypto currency and smart contracts.
+I named the project/token, &ldquo;Patricoin&rdquo; because one of my friends name is Patrick and to poke at the fact that almost all crypto currencies are named after something with the word <code>coin</code> mixed in somewhere.
+What sparked my intrest in learning more about crypto currencies was a presentation by <a href="https://github.com/0xJepsen">Waylon Jepsen</a> on cryto <a href="https://en.wikipedia.org/wiki/Arbitrage">arbitrage</a>.</p>
+<h2 id="creation">Creation</h2>
+<h3 id="erc-777-standard">ERC-777 Standard</h3>
+<p>The ordinary standard tokens are upheld to are ERC-20 which include a list of <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/#methods">functions</a> that the token must implement. An ERC-777 token is backwards compatable with an ERC-20 token but adds a few new features such as <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-777/#hooks">hooks</a>.</p>
+<h3 id="tools">Tools</h3>
+<p>To actually develop the token, I used an ethereum development tookchain called <a href="https://hardhat.org/">hardhat</a>. Hardhat is an amazing tool for the creation of the smart contract and the deployment.
+To protect against token vulnerabilities, such as a <a href="https://hackernoon.com/hack-solidity-reentrancy-attack">reentrancy attack</a>, and to speed up the development process, I used <a href="https://www.openzeppelin.com/">OpenZepplin</a> which is a library for developing smart contracts in solidity. This can protect against reentrancy attacks because of the wide use of OpenZepplin and the thousands of contributers to the project.</p>
+<h2 id="deployment">Deployment</h2>
+<h3 id="goelri-testnet">Goelri Testnet</h3>
+<p>Using hardhat, I deployed the token on the <a href="https://goerli.net/">Goelri testnet</a> which is a testnet on the ethereum blockchain. A testnet is network seperate from the real network of a crypto currency (in this case ethereum), so that developers of these smart contracts can test their deployment. I choose to not deploy Patricoin on the real network because it was made just for fun and it costs money to deploy it. Since the blockchain is visible to anyone, here is the <a href="https://goerli.etherscan.io/token/0xb5e499390d8cef2a6a76158963205d8d18e71df7#code">final deployment</a> on the blockchain.</p>
+<h3 id="uniswap-pool">Uniswap Pool</h3>
+<p><a href="https://uniswap.org/">Uniswap</a> is a DEX or a Decentralized Exchange meaning you can buy and sell crypto currency directly from other people. To build a liquidity pool for patricoin, I used uniswap to put in some Goelri Testnet ETH into a liquidity pool for patricoin so that it could be worth some fake money and I could derive a price. To view this liquidity pool, make sure you have Goelri Testnet selected on the uniswap website, <a href="https://app.uniswap.org/#/pool/45776">Pool</a>.</p>
+<h2 id="creating-the-website">Creating the website</h2>
+<p>I thought it would be a fun idea to sharpen my react skills and learn about web3 to build a <a href="https://0xkilty.github.io/patricoin/">website</a> surrounding patricoin. I used <a href="https://docs.ethers.io/v5/%7Cethers.js">ethers.js</a> and <a href="https://docs.uniswap.org/sdk/v3/overview">uniswap v3 sdk</a> for the development and connection to the blockchain along with Metamask compatibility.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I enjoyed the process of creating patricoin and the <a href="https://0xkilty.github.io/patricoin/">website</a> to go along with it. I also learned about the fine details of blockchain and about web3. Even though there wasn&rsquo;t much room for creativity within the token (becuase my ecomonic knowledge is limited), I still felt that I learned a lot and about how other tokens on the blockchain function.</p>
+
+</div>
+
+
+    
+    <div class="footer">
+            <a href="https://github.com/0xKilty">Github</a>
+            <a href="https://www.linkedin.com/in/ian-kilty/">Linkedin</a>
+            <a href="https://dev.to/0xkilty">Dev.to</a>
+            <a href="https://www.duolingo.com/profile/russian_lang">Duolingo</a>
+            <a href="/resume.pdf">Resume</a>
+            <a href="mailto:ian@iankilty.com">Email me</a>
+    </div>
+    <div class="quote">
+        <span><i>“It ain't what you don't know that gets you into trouble. It's what you know for sure that just ain't so.“ - Mark Twain</i></span>
+    </div>
+</body>
+</html>
