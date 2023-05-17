@@ -1,0 +1,9 @@
+<header>
+    <h2 class="heavy" style="text-transform: capitalize;">
+        {{ if eq "term" .Kind }}
+            Tag: {{ .Data.Term }}
+        {{ else }}
+            {{ .Section }}
+        {{ end }}
+    </h2>
+</header>

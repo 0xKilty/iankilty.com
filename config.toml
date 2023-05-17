@@ -1,0 +1,58 @@
+baseURL = 'http://localhost/'
+languageCode = 'en-us'
+title = "Ian Kilty's Webpage"
+pluralizeListTitles = "false"
+summaryLength = "20"
+linenos = "true"
+enableRobotsTXT = "true"
+favicon = "/img/favicon.ico"
+
+[menu]
+    [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog"
+    weight = 2
+
+    [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
+    weight = 3
+
+    [[menu.main]]
+    identifier = "notes"
+    name = "Notes"
+    url = "https://github.com/0xKilty/Notes"
+    weight = 4
+
+    [[menu.main]]
+    identifier = "github"
+    name = "Github"
+    url = "https://github.com/0xKilty"
+    weight = 5
+
+    [[menu.main]]
+    identifier = "linkedin"
+    name = "Linkedin"
+    url = "https://www.linkedin.com/in/ian-kilty/"
+    weight = 6
+
+    [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    title = "Resume"
+    url = "/resume.pdf"
+    weight = 7
+
+    [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/blog/index.xml"
+    weight = 7

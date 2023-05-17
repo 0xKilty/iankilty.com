@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+	<title>{{ .Page.Title }}</title>
+    <link rel='stylesheet' type='text/css' href='/style.css'>
+    <link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/img/android-chrome-192x192">
+    <link rel="shortcut icon" sizes="192x192" href="/img/android-chrome-192x192">
+    <link rel="apple-touch-icon" href="/img/android-chrome-192x192">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+    {{ if .IsHome }}
+        <header><h2 class="heavy" style="text-transform: capitalize;">{{ .Title }}</h2></header>
+        {{ partial "nav" . }}
+        {{ .Content }}
+        {{ range where .Pages "Title" "Projects" }}
+            <h2>Recent Projects</h2>
+            {{ range .Pages | first 3 }}
+            <div class="post" onclick="window.location='{{ .RelPermalink }}'">
+                <div class="posttitle heavy">{{ .Title }}</div>
+                <div class="summary">{{ .Summary }}</div>
+                <div class="summary">{{ .Date.Format "2006-01-02" }} - 
+                    {{ range (.GetTerms "tags") }}
+                        <a href="{{ .RelPermalink }}" class="summary">{{ .LinkTitle }}</a>
+                    {{ end }}
+                </div>
+            </div>            
+            {{ end }}
+        {{ end }}
+        {{ range where .Pages "Title" "Blog" }}
+            <h2>Recent Posts</h2>
+            {{ range .Pages | first 3 }}
+            <div class="post" onclick="window.location='{{ .RelPermalink }}'">
+                <div class="posttitle heavy">{{ .Title }}</div>
+                <div class="summary">{{ .Summary }}</div>
+                <div class="summary">{{ .Date.Format "2006-01-02" }} - 
+                    {{ range (.GetTerms "tags") }}
+                        <a href="{{ .RelPermalink }}" class="summary">{{ .LinkTitle }}</a>
+                    {{ end }}
+                </div>
+            </div>            
+            {{ end }}
+        {{ end }}
+    {{ else }}
+        {{ partial "title" . }}
+        {{ partial "nav" . }}
+        {{ block "main" . }}
+
+        {{ end }}
+    {{ end }}
+    <div class="footer">
+            <a href="https://github.com/0xKilty">Github</a>
+            <a href="https://www.linkedin.com/in/ian-kilty/">Linkedin</a>
+            <a href="https://dev.to/0xkilty">Dev.to</a>
+            <a href="https://www.duolingo.com/profile/russian_lang">Duolingo</a>
+            <a href="/resume.pdf">Resume</a>
+            <a href="mailto:ian@iankilty.com">Email me</a>
+    </div>
+    <div class="quote">
+        <span><i>“It ain't what you don't know that gets you into trouble. It's what you know for sure that just ain't so.“ - Mark Twain</i></span>
+    </div>
+</body>
+</html>

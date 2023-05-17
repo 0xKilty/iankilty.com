@@ -1,0 +1,22 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>Ian Kilty&#39;s Webpage</title>
+	<link>http://localhost/projects/</link>
+	<description>Recent content in Projects on Ian Kilty&#39;s Webpage</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Sat, 15 Apr 2023 19:55:42 -0600</lastBuildDate>
+    
+        <atom:link href="http://localhost/projects/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>CSU 2022 VR Hackathon</title>
+		<link>http://localhost/blog/csu-2022-vr-hackathon/</link>
+		<pubDate>Sat, 15 Apr 2023 19:54:22 -0600</pubDate>
+		<guid>http://localhost/blog/csu-2022-vr-hackathon/</guid>
+		<description>The Challenge The challenge was for all the teams to create a virtual reality game related towards mental health.</description>
+	</item>
+	
+	</channel>
+</rss>

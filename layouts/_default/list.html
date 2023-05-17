@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ if eq .Section "notes" }}
+    {{ range where .Site.RegularPages "Section" "notes" }}
+        {{ if ne .Title "README"}}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+        {{ end }}
+    {{ end }}
+{{ else }}
+<div class="list">
+    {{ range .Pages }}
+        <div class="post" onclick="window.location='{{ .RelPermalink }}'">
+            <div class="posttitle heavy">{{ .Title }}</div>
+            <div class="summary">{{ .Summary }}</div>
+            <div class="summary">{{ .Date.Format "2006-01-02" }} - 
+                {{ range (.GetTerms "tags") }}
+                    <a href="{{ .RelPermalink }}" class="summary">{{ .LinkTitle }}</a>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}

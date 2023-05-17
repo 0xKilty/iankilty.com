@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Introduction</title>
+    <link rel='stylesheet' type='text/css' href='/style.css'>
+    <link rel='alternate' type='application/rss+xml' title="Ian Kilty&#39;s Webpage RSS" href='/index.xml'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+    
+        <header>
+    <h2 class="heavy" style="text-transform: capitalize;">
+        
+            notes
+        
+    </h2>
+</header>
+
+        
+
+  
+  
+  
+  
+  
+  <a href="/" id="" class="navhead heavy">Home</a>
+
+  
+  
+  
+  
+  
+  <a href="/blog" id="" class="navhead heavy">Blog</a>
+
+  
+  
+  
+  
+  
+  <a href="/projects" id="" class="navhead heavy">Projects</a>
+
+  
+  
+  
+  
+  
+  <a href="/notes" id="active" class="navhead heavy">Notes</a>
+
+  
+  
+  
+  
+  
+  <a href="/blog/index.xml" id="" class="navhead heavy">RSS</a>
+
+
+        
+
+<h2 class="arttitle heavy">Introduction</h2>
+<aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#buffer-overflow-overview">Buffer Overflow Overview</a></li>
+        <li><a href="#exploit-development-introduction">Exploit Development Introduction</a></li>
+        <li><a href="#cpu-architecture">CPU Architecture</a></li>
+        <li><a href="#memory">Memory</a></li>
+        <li><a href="#primary-memory-ram">Primary Memory (RAM)</a></li>
+        <li><a href="#secondary-memory">Secondary Memory</a></li>
+        <li><a href="#control-unit">Control Unit</a></li>
+        <li><a href="#cpu">CPU</a></li>
+        <li><a href="#risc">RISC</a></li>
+        <li><a href="#cisc">CISC</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+<div class="page">
+    <h2 id="introduction">Introduction</h2>
+<h3 id="buffer-overflow-overview">Buffer Overflow Overview</h3>
+<p>Buffer Overflow - caused by injecting information too large for the input to handle such that the code manipulates the CPU&rsquo;s processing</p>
+<p>They can</p>
+<ul>
+<li>cause the program to crash</li>
+<li>corrupt data</li>
+<li>change the data structures in the programs runtime</li>
+</ul>
+<p>Changing the data structures can change the process&rsquo;s return address in memory which allows the attacker to execute commands with the privileges of the process.</p>
+<p>Buffer Overflows are typically in Von-Neumann architecture.</p>
+<p>Languages like C or C++ typically are very capable of producing a Buffer Overflow but languages like Java (which has a garbage collection) helps prevent BOF&rsquo;s.</p>
+<h3 id="exploit-development-introduction">Exploit Development Introduction</h3>
+<p>POC - proof of concept (of an exploit)</p>
+<h3 id="cpu-architecture">CPU Architecture</h3>
+<p>Von-Neumann architecture</p>
+<ul>
+<li>Memory</li>
+<li>Control Unit (CU)</li>
+<li>Arithmetic Logic Unit (ALU)</li>
+<li>Input/Output Unit (IO Unit)</li>
+</ul>
+<p>ALU + CU = CPU (Central Processing Unit) - instructions and control flow</p>
+<p>Instructions and data are fetched by the CU through the bus system</p>
+<p>Bus System - connection between CPU, memory and IO unit</p>
+<h3 id="memory">Memory</h3>
+<h3 id="primary-memory-ram">Primary Memory (RAM)</h3>
+<p>RAM - Defines a type of memory at a point in the memory at the memory address
+Cache - serves as a buffer to the CPU assuring instructions and date always get to the CPU</p>
+<p>Before data and instructions get to the CPU, the RAM acts as the storage. The size of the RAM is the amount of data that can be stored in the processor.</p>
+<h3 id="secondary-memory">Secondary Memory</h3>
+<p>SSD, Flash Drives, CD, etc.</p>
+<p>Not directly accessed by the CPU, but via IO interfaces. Used to store memory that does not need to be processed at the moment.</p>
+<h3 id="control-unit">Control Unit</h3>
+<p>Connected via bus system</p>
+<p>Tasks</p>
+<ul>
+<li>Reading data from the RAM</li>
+<li>Saving data in RAM</li>
+<li>Provide, decode and execute an instruction</li>
+<li>Processing the inputs from peripheral devices</li>
+<li>Processing of outputs to peripheral devices</li>
+<li>Interrupt control</li>
+<li>Monitoring of the entire system</li>
+</ul>
+<p>Instruction Register (IR) - Contains all the instructions that the processor decodes and executes through the execution unit. Then the data is transfered to the ALU for calculation.</p>
+<p>Registers - Store the data used during execution</p>
+<h3 id="cpu">CPU</h3>
+<p>Processes information and operations.</p>
+<p>The CPU reads from memory and initiates data processing.</p>
+<p>Different CPU architectures</p>
+<ul>
+<li><code>x86</code>/<code>i386</code> - (AMD &amp; Intel)</li>
+<li><code>x86-64</code>/<code>amd64</code> - (Microsoft &amp; Sun)</li>
+<li><code>ARM</code> - (Acorn)</li>
+</ul>
+<p>Instruction Set Architecture (ISA) - CPU architectures, gives us the possibility to understand the unified behavior of machine code in assembly language concerning registers, data types, etc.</p>
+<p>There are four different types of <code>ISA</code>:</p>
+<ul>
+<li><code>CISC</code> - <code>Complex Instruction Set Computing</code></li>
+<li><code>RISC</code> - <code>Reduced Instruction Set Computing</code></li>
+<li><code>VLIW</code> - <code>Very Long Instruction Word</code></li>
+<li><code>EPIC</code> - <code>Explicitly Parallel Instruction Computing</code></li>
+</ul>
+<h3 id="risc">RISC</h3>
+<p>The smaller the instruction set, the faster the clock frequencies which enables faster execution.</p>
+<h3 id="cisc">CISC</h3>
+<p>Larger instruction set caused by recurring sequences of instructions combined into single instructions.</p>
+<p>Addressing takes only an 8-bit number</p>
+
+</div>
+
+
+    
+</body>
+</html>
